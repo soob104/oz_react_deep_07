@@ -1,6 +1,132 @@
+*{box-sizing: border-box;}
+
 :root {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: #333;
+}
+
+
+
+.container{
+  min-height: 100vh;
+  max-width: 580px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 16px 80px;
+  gap: 56px;
+  box-sizing: border-box;
+  background: #5f90df;
+  background-image: linear-gradient(180deg, #628ddf 0%, #5b8be0 100%);
+}
+
+.btn{
+  border: none;
+  outline: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  user-select: none;
+}
+
+.btn.stop {background: #e74c3c;}
+.btn.start {background: #2ecc71;}
+
+.timer-container{
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.card{
+  width: 800px;
+  max-width: 980px;
+  background: #eaeaea;
+  border-radius: 10px;
+  padding: 80px 90px;
+  box-shadow:inset 0 0 0 2px rgba(0,0,0,0.04),
+  0 16px 30px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  box-sizing: border-box;
+}
+
+.card-title{
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  color:#222;
+}
+
+.time-row{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.time-block{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chip{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 28px;
+  padding: 0 8px;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  font-weight: 700;
+  letter-spacing: 0.5;
+}
+
+.unit{
+  font-weight: 700;
+  color: #2b2b2b;
+  margin-left: 2px;
+}
+
+.btn.btn-sm{
+  font-size: 12px;
+  padding: 6px 12px;
+  background: #dd2b17;
+  color:#fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn.btn-sm.start{
+  background: #dd2b17;
+}
+.btn.btn-sm.stop{
+  background: grey;
+}
+
+.btn.btn-sm.start:hover{
+opacity: 0.95;}
+
+.btn.btn-sm.stop:hover{
+opacity: 0.95;}
+
+@media(max-width: 520px){
+  .card{padding: 28px 18px 32px;}
+  .card-title{font-size: 18px;}
+  .chip{min-width: 32px; height: 26px;}
+  .time-row{gap: 14px;}
+  .time-block{gap: 8px;}
 }
